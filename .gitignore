@@ -17,3 +17,7 @@
 
 # Ignore secret token file
 .secret
+
+# Idea file
+.idea
+*.iml
