@@ -58,3 +58,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Twitter Bootstrap
+gem 'bootstrap-sass', '2.3.2.0'
+
+# Sprockets
+gem 'sprockets', '2.11.0'
