@@ -64,3 +64,6 @@ gem 'bootstrap-sass', '2.3.2.0'
 
 # Sprockets
 gem 'sprockets', '2.11.0'
+
+# bcrypt gem
+gem 'bcrypt-ruby', '3.1.2'
