@@ -7,6 +7,11 @@ SampleApp::Application.routes.draw do
   get '/signup', to: 'users#new'
 
   resources :users
+  resources :sessions, only: [ :new, :create, :destroy ]
+
+  get '/signin', to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
