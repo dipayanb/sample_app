@@ -6,9 +6,14 @@ SampleApp::Application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/signup', to: 'users#new'
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :sessions, only: [ :new, :create, :destroy ]
   resources :microposts, only: [ :create, :destroy ]
+  resources :relationships, only: [:create, :destroy]
 
   get '/signin', to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'
